@@ -8,7 +8,7 @@ body {
 
 h2 {
   text-align: center;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   color: #3498db; /* Azul serenity */
 }
 
@@ -48,16 +48,18 @@ button {
 button:hover {
   background-color: #2980b9; /* Azul serenity mais escuro */
 }
+
 .container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 100vh; /* Define a altura da div como a altura da viewport */
+  min-height: 100vh; /* Alterado para min-height para garantir que a altura se expanda conforme necessário */
 }
 
 .form-container {
-  width: 100%; /* Para que o formulário não ultrapasse a largura máxima definida */
+  width: 100%;
+  margin: 0; /* Adicionado para remover qualquer margem padrão */
 }
 
 
