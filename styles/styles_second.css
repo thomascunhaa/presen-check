@@ -18,6 +18,11 @@ body {
   padding: 30px;
   background-color: #fff;
 }
+input:focus {
+  border-color: #3498db; /* Altera a cor da borda para azul quando o input é clicado */
+  outline: none; /* Remove o contorno padrão ao focar */
+}
+
 
 h2 {
   text-align: center;
