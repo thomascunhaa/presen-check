@@ -6,6 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Confirmação de Presença - Casamento</title>
   <link rel="stylesheet" href="../styles/styles_second.css"> <!-- Vincula o arquivo CSS -->
+  <style>
+    /* Adiciona estilo para o texto relacionado à criança */
+    .crianca-label {
+      font-size: 0.8em;
+      /* Reduz o tamanho do texto */
+    }
+  </style>
 </head>
 
 <body>
@@ -25,6 +32,24 @@
             <option value="Sim">Sim</option>
             <option value="Não">Não</option>
           </select>
+          <!-- Div para o checkbox relacionado à criança -->
+          <div class="checkbox-wrapper-6">
+            <label class="crianca-label" for="acompanhado">Virá acompanhado de criança?</label>
+            <!-- Checkbox para indicar se há criança acompanhando -->
+            <input class="tgl tgl-light" id="acompanhado" type="checkbox" onclick="showIdadeCrianca()">
+            <label class="tgl-btn" for="acompanhado"></label>
+          </div>
+          <!-- Div para exibir o campo de seleção de idade da criança -->
+          <div id="idade-crianca" style="display: none;">
+            <label for="idade">Idade da criança:</label>
+            <!-- Select para escolher a idade da criança -->
+            <select id="idade" name="idade">
+              <option value="0-2">0-2 anos</option>
+              <option value="3-5">3-5 anos</option>
+              <option value="6-10">6-10 anos</option>
+              <option value="11-14">11-14 anos</option>
+            </select>
+          </div>
         </div>
       </div>
       <br>
@@ -37,6 +62,20 @@
   </div>
 
   <script src="../scripts/scripts_second_page.js"></script> <!-- Arquivo JavaScript para manipulação de eventos -->
+
+  <script>
+    // Função para exibir ou ocultar o campo de seleção de idade da criança
+    function showIdadeCrianca() {
+      var checkBox = document.getElementById("acompanhado");
+      var idadeCriancaDiv = document.getElementById("idade-crianca");
+      if (checkBox.checked == true) {
+        idadeCriancaDiv.style.display = "block"; // Exibe o campo de seleção de idade
+      } else {
+        idadeCriancaDiv.style.display = "none"; // Oculta o campo de seleção de idade
+      }
+    }
+  </script>
+
 </body>
 
 </html>

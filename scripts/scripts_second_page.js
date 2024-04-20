@@ -49,3 +49,13 @@ function submitForm() {
   // Aqui você pode adicionar a lógica para enviar o formulário, por exemplo:
   // document.getElementById("form").submit();
 }
+
+function showIdadeCrianca() {
+  var checkBox = document.getElementById("acompanhado");
+  var idadeCriancaDiv = document.getElementById("idade-crianca");
+  if (checkBox.checked == true) {
+    idadeCriancaDiv.style.display = "block"; // Exibe o campo de seleção de idade
+  } else {
+    idadeCriancaDiv.style.display = "none"; // Oculta o campo de seleção de idade
+  }
+}
