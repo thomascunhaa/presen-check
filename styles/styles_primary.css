@@ -55,12 +55,6 @@ button:hover {
   height: calc(100vh - 56px); /* Substitua 56px pela altura da barra de endereço do seu navegador */
 }
 
-.form-container {
-  width: 100%;
-  max-width: 400px; /* Adicionado max-width para limitar a largura do formulário em dispositivos maiores */
-  padding: 30px; /* Movido de dentro de form para .form-container */
-  background-color: #fff;
-}
 
 form {
   margin: 0; /* Removido margin: 0 auto; de form */
