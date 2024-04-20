@@ -3,7 +3,7 @@ function verificarPresenca(event) {
   event.preventDefault(); // Impede o envio do formulário
   
   // Obtém o valor do campo de entrada
-  var nome = document.getElementById('nome').value;
+  var nome = document.getElementById('nome').value.trim();
 
   // Carrega os dados do arquivo JSON
   fetch('data/presetation_convited.json')
