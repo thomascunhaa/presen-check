@@ -64,7 +64,7 @@ button:hover {
 
 
 /* Estilo para o formulário quando estiver em tela pequena */
-@media (max-width: 480px) {
+@media (max-width: 389px) {
   form {
     padding: 20px;
   }
