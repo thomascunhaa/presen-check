@@ -11,7 +11,7 @@ dados_do_formulario.addEventListener('submit', function(event) {
   // Adicionar os campos dos novos elementos dinâmicos
   var novosCampos = document.querySelectorAll('.pessoa input[type="text"], .pessoa select');
   novosCampos.forEach(function(campo) {
-    formData.append(campo.name, campo.value);
+    formData.append(campo.name, campo.value, idade.value, campo.acompanhado);
   });
 
   mostrarLoading(); // Mostrar o loading antes de enviar os dados
