@@ -17,8 +17,6 @@ form {
   margin: 0 auto;
   background-color: #fff;
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 label {
@@ -62,9 +60,6 @@ button:hover {
   max-width: 400px; /* Adicionado max-width para limitar a largura do formulário em dispositivos maiores */
   padding: 30px; /* Movido de dentro de form para .form-container */
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; /* Adicionado para incluir o padding na largura total */
 }
 
 form {
