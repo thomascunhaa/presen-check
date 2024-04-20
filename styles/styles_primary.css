@@ -54,7 +54,7 @@ button:hover {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh; /* Alterado para min-height para garantir que a altura se expanda conforme necessário */
+  height: calc(100vh - 56px); /* Substitua 56px pela altura da barra de endereço do seu navegador */
 }
 
 .form-container {
