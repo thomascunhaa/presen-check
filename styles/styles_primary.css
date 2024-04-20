@@ -36,11 +36,6 @@ button {
   font-size: 16px;
 }
 
-input:focus {
-  border-color: #3498db; /* Altera a cor da borda para azul quando o input é clicado */
-  outline: none; /* Remove o contorno padrão ao focar */
-}
-
 button {
   background-color: #3498db; /* Azul serenity */
   color: white;
@@ -57,6 +52,7 @@ button:hover {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  height: calc(100vh - 56px); /* Substitua 56px pela altura da barra de endereço do seu navegador */
 }
 
 .form-container {
@@ -74,7 +70,5 @@ form {
 @media (max-width: 480px) {
   .form-container {
     padding: 20px; /* Movido de form para .form-container */
-    margin: 0 50px; /* Adicionado espaçamento lateral de 10px */
   }
 }
-
