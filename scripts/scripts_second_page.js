@@ -40,3 +40,12 @@ function esconderLoading() {
   document.getElementById('loading').style.display = 'none';
 }
 
+function submitForm() {
+  // Oculta o botão
+  document.getElementById("enviar").style.display = "none";
+  // Mostra o elemento de carregamento
+  document.getElementById("loading").style.display = "block";
+
+  // Aqui você pode adicionar a lógica para enviar o formulário, por exemplo:
+  // document.getElementById("form").submit();
+}
