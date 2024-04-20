@@ -14,7 +14,7 @@ h2 {
 
 form {
   max-width: 400px;
-  /* margin: 0 auto; */
+  margin: 0 auto;
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
@@ -59,13 +59,21 @@ button:hover {
 
 .form-container {
   width: 100%;
-  margin: 0; /* Adicionado para remover qualquer margem padrão */
+  max-width: 400px; /* Adicionado max-width para limitar a largura do formulário em dispositivos maiores */
+  padding: 30px; /* Movido de dentro de form para .form-container */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Adicionado para incluir o padding na largura total */
 }
 
+form {
+  margin: 0; /* Removido margin: 0 auto; de form */
+}
 
 /* Estilo para o formulário quando estiver em tela pequena */
 @media (max-width: 480px) {
-  form {
-    padding: 20px;
+  .form-container {
+    padding: 20px; /* Movido de form para .form-container */
   }
 }
