@@ -14,31 +14,32 @@
 
   <!-- Texto de boas-vindas -->
   <p>Olá, seja bem-vindo(a) ao nosso casamento!</p>
-
-  <form name="confirmarPresencaForm" method="post" action="">
-    <div id="pessoas-container">
-      <!-- Campos para a primeira pessoa -->
-      <div class="pessoa">
-        <label for="nome">Seu nome:</label>
-        <input type="text" name="nome" required>
-        <label for="confirmacao">Você confirma sua presença?</label>
-        <select id="confirmacao" name="confirmacao" required>
-          <option value="Sim">Sim</option>
-          <option value="Não">Não</option>
-        </select>
+  <div class="container">
+    <form name="confirmarPresencaForm" method="post" action="">
+      <div id="pessoas-container">
+        <!-- Campos para a primeira pessoa -->
+        <div class="pessoa">
+          <label for="nome">Seu nome:</label>
+          <input type="text" name="nome" required>
+          <label for="confirmacao">Você confirma sua presença?</label>
+          <select id="confirmacao" name="confirmacao" required>
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+          </select>
+        </div>
       </div>
-    </div>
-    <br>
-    <!-- Botão para adicionar outra pessoa -->
-    <button type="button" onclick="adicionarPessoa()">Adicionar outra pessoa</button>
-    <br>
-    <!-- Botão de envio -->
-    <button type="submit" id="enviar">Confirmar Presença</button>
-    <!-- Spinner de loading -->
-    <div id="loading" style="display: none; text-align: center;">
-      <div class="spinner"></div>
-    </div>
-  </form>
+      <br>
+      <!-- Botão para adicionar outra pessoa -->
+      <button type="button" onclick="adicionarPessoa()">Adicionar outra pessoa</button>
+      <br>
+      <!-- Botão de envio -->
+      <button type="submit" id="enviar">Confirmar Presença</button>
+      <!-- Spinner de loading -->
+      <div id="loading" style="display: none; text-align: center;">
+        <div class="spinner"></div>
+      </div>
+    </form>
+  </div>
 
   <script src="../scripts/scripts_second_page.js"></script> <!-- Arquivo JavaScript para manipulação de eventos -->
 </body>
