@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmação de Presença - Casamento</title>
+  <link rel="stylesheet" href="styles/styles_primary.css"> <!-- Vincula o arquivo CSS -->
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Confirmação de Presença - Casamento</h2>
+
+    <div class="form-container">
+      <form id="verificarForm" onsubmit="verificarPresenca(event)">
+        <label for="nome">Digite seu nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <button type="submit">Verificar Presença</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts/scripts_primary_page.js"></script> <!-- Arquivo JavaScript para manipulação de eventos -->
+</body>
+
+</html>

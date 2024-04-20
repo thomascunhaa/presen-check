@@ -1,0 +1,97 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 30px;
+  color: #3498db; /* Azul serenity */
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aumenta a sombra para um efeito mais proeminente */
+}
+
+p {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+button {
+  background-color: #3498db; /* Azul serenity */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Adiciona transição suave */
+}
+
+button:hover {
+  background-color: #2980b9; /* Azul serenity mais escuro */
+  transform: translateY(-2px); /* Eleva ligeiramente o botão ao passar o mouse */
+}
+
+/* Estilo para o campo de confirmação */
+#confirmacao {
+  color: #333;
+}
+
+/* Estilo para o formulário em telas pequenas */
+@media (max-width: 480px) {
+  form {
+    padding: 20px;
+    margin-left: 10px; /* Afasta um pouco da borda esquerda */
+    margin-right: 10px; /* Afasta um pouco da borda direita */
+  }
+}
+
+#loading {
+  display: none;
+  text-align: center;
+  margin-top: 20px; /* Adiciona algum espaço acima do texto */
+}
+
+/* Animação da bolinha giratória */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilo da bolinha giratória */
+.spinner {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #3498db; /* Cor do tema */
+  animation: spin 1s ease-in-out infinite; /* Aplica a animação */
+}
