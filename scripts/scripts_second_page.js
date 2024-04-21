@@ -1,4 +1,4 @@
-const scrip_do_google = 'https://script.google.com/macros/s/AKfycbxJTE7mCPXFJ7bUeZVRHv09rRmHqxdaRRQvRDIPt0EfwN953m-GZnes3p-FRPeTaq0/exec';
+const script_do_google = 'https://script.google.com/macros/s/AKfycbwm9viY92lLB-m8HPFCHIte5c8TpwILM6AUGIzuMMjfoV2nqTs__5uJIv_jKClC_43L/exec';
 const dados_do_formulario = document.forms['confirmarPresencaForm'];
 
 dados_do_formulario.addEventListener('submit', function(event) {
@@ -7,23 +7,35 @@ dados_do_formulario.addEventListener('submit', function(event) {
   // Criar um novo FormData para armazenar todos os campos do formulário
   var formData = new FormData();
 
-
   // Adicionar os campos dos novos elementos dinâmicos
   var novosCampos = document.querySelectorAll('.pessoa input[type="text"], .pessoa select');
   novosCampos.forEach(function(campo) {
-    formData.append(campo.name, campo.value);
+    formData.append(campo.name, campo.value); // Adiciona nome e confirmação ao FormData
   });
+
+  // Adicionar dados do checkbox e da idade da criança, se aplicável
+  var acompanhado = document.getElementById("acompanhado").checked;
+  var nomeCrianca = document.getElementById("nome_crianca").value;
+  if (acompanhado) {
+    var idadeCrianca = document.getElementById("idade").value;
+    formData.append("acompanhado", "Sim");
+    formData.append("idade", idadeCrianca);
+    console.log('nomeCrianca: ', nomeCrianca)
+    formData.append("nome_crianca", nomeCrianca); // Adiciona o nome da criança ao FormData
+  } else {
+    formData.append("acompanhado", "Não");
+    formData.append("idade", ""); // Adiciona uma string vazia para a idade se não houver criança
+    formData.append("nome_crianca", ""); // Adiciona uma string vazia para o nome da criança se não houver criança
+  }
 
   mostrarLoading(); // Mostrar o loading antes de enviar os dados
 
-  fetch(scrip_do_google, {method: 'POST', mode: 'no-cors', body: formData})
+  fetch(script_do_google, {method: 'POST', body: formData})
     .then(response => {
       if (!response.ok) {
-        window.location.href = 'index_third.html';  
         throw new Error('Erro ao enviar os dados.');
       }
-      alert('Dados enviados com sucesso!');
-      dados_do_formulario.reset();
+      window.location.href = 'index_third.html';  
       // Redireciona para outra página HTML
     })
     .catch(error => console.error(error))
@@ -40,14 +52,10 @@ function esconderLoading() {
   document.getElementById('loading').style.display = 'none';
 }
 
-function submitForm() {
-  // Oculta o botão
-  document.getElementById("enviar").style.display = "none";
-  // Mostra o elemento de carregamento
-  document.getElementById("loading").style.display = "block";
 
-  // Aqui você pode adicionar a lógica para enviar o formulário, por exemplo:
-  // document.getElementById("form").submit();
+function submitForm() {
+  document.getElementById("enviar").style.display = "none";
+  document.getElementById("loading").style.display = "block";
 }
 
 function showIdadeCrianca() {
