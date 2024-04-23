@@ -1,9 +1,11 @@
-// Função para verificar a presença e redirecionar para a segunda tela
 function verificarPresenca(event) {
   event.preventDefault(); // Impede o envio do formulário
   
   // Obtém o valor do campo de entrada
   var nome = document.getElementById('nome').value.trim();
+
+  // Armazena o valor do nome em localStorage
+  localStorage.setItem('nome', nome);
 
   // Carrega os dados do arquivo JSON
   fetch('data/presetation_convited.json')

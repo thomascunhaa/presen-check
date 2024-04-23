@@ -16,6 +16,7 @@ dados_do_formulario.addEventListener('submit', function(event) {
   // Adicionar dados do checkbox e da idade da criança, se aplicável
   var acompanhado = document.getElementById("acompanhado").checked;
   var nomeCrianca = document.getElementById("nome_crianca").value;
+
   if (acompanhado) {
     var idadeCrianca = document.getElementById("idade").value;
     formData.append("acompanhado", "Sim");
@@ -67,3 +68,27 @@ function showIdadeCrianca() {
     idadeCriancaDiv.style.display = "none"; // Oculta o campo de seleção de idade
   }
 }
+
+window.onload = function() {
+  // Recupera o valor do nome armazenado em localStorage
+  var nome = localStorage.getItem('nome');
+
+  // Verifica se o valor do nome existe e preenche o campo de entrada correspondente
+  if (nome) {
+    document.getElementsByName('nome')[0].value = nome;
+  }
+}
+
+// Obter os parâmetros da solicitação
+var nome = e.parameter.nome;
+var confirmacao = e.parameter.confirmacao;
+var acompanhado = e.parameter.acompanhado;
+var idade = e.parameter.idade || ""; // Idade é opcional
+var nome_crianca = e.parameter.nome_crianca || ""; // Nome da criança é opcional
+
+// Adicionar um log para verificar o valor de nome_crianca
+Logger.log("Nome da criança: " + nome_crianca);
+
+// Abrir a planilha e adicionar uma nova linha com os dados
+
+
