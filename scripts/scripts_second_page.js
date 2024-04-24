@@ -79,16 +79,3 @@ window.onload = function() {
   }
 }
 
-// Obter os parâmetros da solicitação
-var nome = e.parameter.nome;
-var confirmacao = e.parameter.confirmacao;
-var acompanhado = e.parameter.acompanhado;
-var idade = e.parameter.idade || ""; // Idade é opcional
-var nome_crianca = e.parameter.nome_crianca || ""; // Nome da criança é opcional
-
-// Adicionar um log para verificar o valor de nome_crianca
-Logger.log("Nome da criança: " + nome_crianca);
-
-// Abrir a planilha e adicionar uma nova linha com os dados
-
-
